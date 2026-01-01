@@ -1,0 +1,1 @@
+#This repo is contains random python scripts that i tried for fun.
