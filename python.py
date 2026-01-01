@@ -55,3 +55,50 @@ x_coordinate = coordinates[0]
 print("X Coordinate:", x_coordinate)
 is_five_in_set = 5 in unique_numbers
 print("Is 5 in unique_numbers set?:", is_five_in_set)
+
+# Looping through list
+print("Fruits in the list:")
+for fruit in fruits:
+    print(fruit)
+
+
+# Looping through dictionary
+print("Person details:")
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Conditional statements
+if age > 18:
+    print("Adult")
+else:
+    print("Minor")
+
+
+# Function to greet a person
+def greet(person_name):
+    return f"Hello, {person_name}!"
+greeting = greet(name)
+print(greeting)
+# Function to calculate area of a rectangle
+def calculate_area(length, width):
+    return length * width
+area = calculate_area(5, 3)
+print("Area of rectangle:", area)
+
+# Class definition for a simple Person
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        return f"My name is {self.name} and I am {self.age} years old."
+# Creating an instance of Person
+person1 = Person("Charlie", 28)
+introduction = person1.introduce()
+print(introduction)
+
+
+
+
+
