@@ -98,7 +98,46 @@ person1 = Person("Charlie", 28)
 introduction = person1.introduce()
 print(introduction)
 
+# Inheritance example
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    def introduce(self):
+        base_introduction = super().introduce()
+        return f"{base_introduction} My student ID is {self.student_id}."
+
+# Creating an instance of Student
+student1 = Student("Diana", 22, "S12345")
+student_introduction = student1.introduce()    
+print(student_introduction)
 
 
+# Exception handling example
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+else:
+    print("Result:", result)
+finally:
+    print("Execution completed.")
 
 
+# File operations example
+file_path = "example.txt"
+# Writing to a file
+with open(file_path, "w") as file:
+    file.write("Hello, World!\nThis is a sample file.")
+
+
+# Reading from a file
+with open(file_path, "r") as file:
+    content = file.read()
+    print("File content:")
+    print(content)
+# Clean up the created file
+import os   
+os.remove(file_path)
+# End of the code
