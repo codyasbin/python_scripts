@@ -37,3 +37,21 @@ print("Type of person:", type(person))
 print("Type of unique_numbers:", type(unique_numbers))
 
 # Perform basic operations
+sum_age_height = age + height
+print("Sum of age and height:", sum_age_height)
+fruits.append("date")
+print("Updated Fruits:", fruits)
+person["city"] = "New York"
+print("Updated Person:", person)
+unique_numbers.add(6)
+print("Updated Unique Numbers:", unique_numbers)
+
+# Accessing elements
+first_fruit = fruits[0]
+print("First fruit:", first_fruit)
+person_name = person["name"]
+print("Person's name:", person_name)
+x_coordinate = coordinates[0]
+print("X Coordinate:", x_coordinate)
+is_five_in_set = 5 in unique_numbers
+print("Is 5 in unique_numbers set?:", is_five_in_set)
