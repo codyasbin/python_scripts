@@ -24,3 +24,16 @@ print("Fruits:", fruits)
 print("Coordinates:", coordinates)
 print("Person:", person)
 print("Unique Numbers:", unique_numbers)
+
+
+# Check data types
+print("Type of age:", type(age))
+print("Type of height:", type(height))  
+print("Type of name:", type(name))
+print("Type of is_student:", type(is_student))  
+print("Type of fruits:", type(fruits))
+print("Type of coordinates:", type(coordinates))
+print("Type of person:", type(person))
+print("Type of unique_numbers:", type(unique_numbers))
+
+# Perform basic operations
