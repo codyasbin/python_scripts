@@ -317,4 +317,8 @@ class MyClass(metaclass=Meta):
     pass
 obj = MyClass()
 # Using itertools to create permutations
+from itertools import permutations
+perm = permutations(['A', 'B', 'C'], 2)
+print("Permutations of 2 from ['A', 'B', 'C']:", list(perm))
+# Using namedtuple from collections
 
