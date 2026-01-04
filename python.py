@@ -337,3 +337,9 @@ print("Weak reference before deletion:", weak_obj())
 del obj
 print("Weak reference after deletion:", weak_obj())
 # Using enum module
+from enum import Enum
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+print("Enum Color RED:", Color.RED)
