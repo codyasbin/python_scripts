@@ -327,3 +327,13 @@ Point = namedtuple('Point', ['x', 'y'])
 p = Point(10, 20)
 print("Namedtuple Point:", p)
 # Using weakref module
+import weakref
+class MyObject:
+    def __init__(self, name):
+        self.name = name
+obj = MyObject("WeakRefObject")
+weak_obj = weakref.ref(obj)
+print("Weak reference before deletion:", weak_obj())
+del obj
+print("Weak reference after deletion:", weak_obj())
+# Using enum module
