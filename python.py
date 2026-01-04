@@ -283,3 +283,13 @@ from functools import reduce
 product = reduce(lambda x, y: x * y, numbers)
 print("Product of numbers using reduce:", product)
 # Decorator example
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        print("Wrapper executed before", original_function.__name__)
+        return original_function(*args, **kwargs)
+    return wrapper_function
+@decorator_function
+def display():
+    print("Display function executed.")
+display()
+# Context manager example
