@@ -266,3 +266,5 @@ print("Thread has finished execution.")
 squares = [x**2 for x in range(10)]
 print("Squares from 0 to 9:", squares)
 # Generator expression
+cubes = (x**3 for x in range(10))
+print("Cubes from 0 to 9:", list(cubes))
