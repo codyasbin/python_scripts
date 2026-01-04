@@ -275,3 +275,7 @@ print("Sum of 3 and 5 using lambda:", add(3, 5))
 numbers = [1, 2, 3, 4, 5]
 doubled = list(map(lambda x: x * 2, numbers))
 print("Doubled numbers using map:", doubled)
+# Filter function
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print("Even numbers using filter:", even_numbers)
+# Reduce function
