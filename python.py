@@ -353,3 +353,8 @@ class Car:
 my_car = Car("Toyota", "Corolla", 2020)
 print("Dataclass Car:", my_car)
 # Using pathlib module
+from pathlib import Path
+current_path = Path('.').resolve()
+print("Current path using pathlib:", current_path)
+# Using zipfile module to create and extract zip files
+
