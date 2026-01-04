@@ -268,3 +268,6 @@ print("Squares from 0 to 9:", squares)
 # Generator expression
 cubes = (x**3 for x in range(10))
 print("Cubes from 0 to 9:", list(cubes))
+# Lambda function
+add = lambda a, b: a + b
+print("Sum of 3 and 5 using lambda:", add(3, 5))
