@@ -293,3 +293,19 @@ def display():
     print("Display function executed.")
 display()
 # Context manager example
+class FileManager:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+    def __enter__(self):
+        self.file = open(self.filename, self.mode)
+        return self.file
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.file.close()
+with FileManager('context_manager_example.txt', 'w') as f:
+    f.write("This file is created using a custom context manager.")
+with open('context_manager_example.txt', 'r') as f:
+    content = f.read()
+    print("Content from context manager file:", content)
+os.remove('context_manager_example.txt')
+# Metaclass example
