@@ -322,3 +322,8 @@ perm = permutations(['A', 'B', 'C'], 2)
 print("Permutations of 2 from ['A', 'B', 'C']:", list(perm))
 # Using namedtuple from collections
 
+from collections import namedtuple
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(10, 20)
+print("Namedtuple Point:", p)
+# Using weakref module
