@@ -279,3 +279,7 @@ print("Doubled numbers using map:", doubled)
 even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
 print("Even numbers using filter:", even_numbers)
 # Reduce function
+from functools import reduce
+product = reduce(lambda x, y: x * y, numbers)
+print("Product of numbers using reduce:", product)
+# Decorator example
