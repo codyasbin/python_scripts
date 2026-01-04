@@ -357,4 +357,20 @@ from pathlib import Path
 current_path = Path('.').resolve()
 print("Current path using pathlib:", current_path)
 # Using zipfile module to create and extract zip files
+import zipfile
+zip_file_path = 'example.zip'
+# Creating a zip file
+with zipfile.ZipFile(zip_file_path, 'w') as zipf:
+    zipf.writestr('file1.txt', 'This is the content of file1.')
+    zipf.writestr('file2.txt', 'This is the content of file2.')
+# Extracting from a zip file
+with zipfile.ZipFile(zip_file_path, 'r') as zipf:
+    zipf.extractall('extracted_files')
+print("Extracted files from zip:")
+for file in Path('extracted_files').iterdir():
+    print(file.name)
+# Clean up created files and directory
+shutil.rmtree('extracted_files')
+os.remove(zip_file_path)
+
 
