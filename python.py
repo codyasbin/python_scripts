@@ -271,3 +271,7 @@ print("Cubes from 0 to 9:", list(cubes))
 # Lambda function
 add = lambda a, b: a + b
 print("Sum of 3 and 5 using lambda:", add(3, 5))
+# Map function
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, numbers))
+print("Doubled numbers using map:", doubled)
