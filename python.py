@@ -309,3 +309,12 @@ with open('context_manager_example.txt', 'r') as f:
     print("Content from context manager file:", content)
 os.remove('context_manager_example.txt')
 # Metaclass example
+class Meta(type):
+    def __new__(cls, name, bases, attrs):
+        print("Creating class:", name)
+        return super(Meta, cls).__new__(cls, name, bases, attrs)
+class MyClass(metaclass=Meta):
+    pass
+obj = MyClass()
+# Using itertools to create permutations
+
