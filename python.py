@@ -259,3 +259,10 @@ thread = threading.Thread(target=print_numbers)
 thread.start()
 thread.join()
 print("Thread has finished execution.")
+
+
+# Advanced python concepts 
+# List comprehension
+squares = [x**2 for x in range(10)]
+print("Squares from 0 to 9:", squares)
+# Generator expression
