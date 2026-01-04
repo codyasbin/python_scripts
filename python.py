@@ -343,3 +343,13 @@ class Color(Enum):
     GREEN = 2
     BLUE = 3
 print("Enum Color RED:", Color.RED)
+# Using dataclasses module
+from dataclasses import dataclass
+@dataclass
+class Car:
+    make: str
+    model: str
+    year: int
+my_car = Car("Toyota", "Corolla", 2020)
+print("Dataclass Car:", my_car)
+# Using pathlib module
