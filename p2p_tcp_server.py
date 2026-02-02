@@ -7,7 +7,7 @@ hostname = socket.gethostname()
 print(f"Hostname: {hostname}")
 
 # Example: Get IP address
-ip_address = socket.gethostbyname(hostname)
+ip_address = "192.168.1.70"
 print(f"IP Address: {ip_address}")
 
 port =5000
