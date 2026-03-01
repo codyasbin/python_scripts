@@ -6,6 +6,9 @@ API_URL = "https://randomuser.me/api/"
 # 1. Read CLI argument
 arg = sys.argv[1] if len(sys.argv) > 1 else "all"
 
+if arg=="--help":
+    print("Usage: python CLI_tool.py [name|email|country|all]")
+    sys.exit(0)
 # 2. Call public API
 response = requests.get(API_URL)
 data = response.json()
