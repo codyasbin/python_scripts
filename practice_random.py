@@ -4,12 +4,15 @@ if input() == "":
     print ("Welcome to the asbins game!")
     number=int(input("Enter a number: "))
     if number%2==0:
+        for i in range(3):
+            print ("Asbin")
         print ("You win!")
     else:
         print ("You lose!")
-    print ("Press Enter to play again!\n Press Ctrl+C to exit the game.")
+    print ("Press Enter to play again!\nPress Ctrl+C to exit the game.")
     if input().lower()=="q":
         break
 
-    
+if input().lower()=="q":
+    print ("Thanks for playing!")
 
