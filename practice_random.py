@@ -16,20 +16,30 @@
 # if input().lower()=="q":
 #     print ("Thanks for playing!")
 
-from typing import List
+# from typing import List
 
 
-variable:str= "sdc"
-number:int= 5
-print (type(variable))
-print (type(number))
+# variable:str= "sdc"
+# number:int= 5
+# print (type(variable))
+# print (type(number))
 
 # fruits:list= ["apple", "banana", "cherry"]
 # print (type(fruits))
-fruits:List[str]= ["apple", "banana", "cherry"]
-print (f'the type of fruits variable is: {type(fruits)}')
+# fruits:List[str]= ["apple", "banana", "cherry"]
+# print (f'the type of fruits variable is: {type(fruits)}')
 
-age: int = 20
-print (f'the type of age variable is: {type(age)}')
+# age: int = 20
+# print (f'the type of age variable is: {type(age)}')
 
-print(round(age/5), "is the result of dividing age by 5")
+# print(round(age/5), "is the result of dividing age by 5")
+
+def get_name(name: str | None) -> str:
+    if name is None:
+        return "No name provided"
+    else:
+        return f"Hello, {name}!"
+    
+
+print(get_name("Alice"))
+print(get_name(None))
