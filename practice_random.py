@@ -28,3 +28,8 @@ print (type(number))
 # print (type(fruits))
 fruits:List[str]= ["apple", "banana", "cherry"]
 print (f'the type of fruits variable is: {type(fruits)}')
+
+age: int = 20
+print (f'the type of age variable is: {type(age)}')
+
+print(round(age/5), "is the result of dividing age by 5")
