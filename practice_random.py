@@ -16,7 +16,15 @@
 # if input().lower()=="q":
 #     print ("Thanks for playing!")
 
+from typing import List
+
+
 variable:str= "sdc"
 number:int= 5
 print (type(variable))
 print (type(number))
+
+# fruits:list= ["apple", "banana", "cherry"]
+# print (type(fruits))
+fruits:List[str]= ["apple", "banana", "cherry"]
+print (f'the type of fruits variable is: {type(fruits)}')
