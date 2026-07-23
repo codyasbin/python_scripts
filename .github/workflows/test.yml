@@ -1,4 +1,4 @@
-name: Run Simple Tests
+name: Demo Workflow
 
 on:
   push:
@@ -6,19 +6,32 @@ on:
       - main
 
 jobs:
+
   test:
 
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
 
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Run Program
-        run: python app.py
+      - run: python app.py
+
+  hello:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Hello from another job!"
+
+  system-info:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: uname -a
+      - run: python --version
+      - run: pwd
