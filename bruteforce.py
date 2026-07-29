@@ -1,5 +1,5 @@
 """Rate-limited GET loop tester for an authorized private-network lab."""
-
+# python bruteforce.py "http://192.168.18.9:3000/" --delay 0.5 --max-attempts 50 --success-status 999
 from __future__ import annotations
 
 import argparse
