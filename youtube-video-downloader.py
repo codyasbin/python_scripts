@@ -5,6 +5,7 @@ Usage:
     python youtube-video-downloader.py <youtube_url> [output_dir]
 """
 
+import shutil
 import sys
 from pathlib import Path
 
@@ -12,6 +13,23 @@ try:
     import yt_dlp
 except ImportError:
     sys.exit("Missing dependency. Install it with: pip install yt-dlp")
+
+# Fallback path in case ffmpeg was just installed and isn't on PATH yet
+# for the current process (common right after a winget install).
+_FFMPEG_FALLBACK_DIR = (
+    Path.home()
+    / "AppData/Local/Microsoft/WinGet/Packages"
+    / "Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe"
+    / "ffmpeg-8.1.2-full_build/bin"
+)
+
+
+def _find_ffmpeg() -> str | None:
+    if shutil.which("ffmpeg"):
+        return None  # let yt-dlp find it on PATH
+    if (_FFMPEG_FALLBACK_DIR / "ffmpeg.exe").exists():
+        return str(_FFMPEG_FALLBACK_DIR)
+    return None
 
 
 def download_video(url: str, output_dir: str = "downloads") -> None:
@@ -24,6 +42,10 @@ def download_video(url: str, output_dir: str = "downloads") -> None:
         "noplaylist": True,
         "progress_hooks": [_progress_hook],
     }
+
+    ffmpeg_dir = _find_ffmpeg()
+    if ffmpeg_dir:
+        ydl_opts["ffmpeg_location"] = ffmpeg_dir
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
