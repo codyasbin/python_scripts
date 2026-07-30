@@ -32,20 +32,67 @@ def _find_ffmpeg() -> str | None:
     return None
 
 
+def _list_video_formats(info: dict) -> list[dict]:
+    best_by_height: dict[int, dict] = {}
+    for f in info.get("formats", []):
+        height = f.get("height")
+        if not height or f.get("vcodec") == "none":
+            continue
+        current = best_by_height.get(height)
+        is_avc1 = (f.get("vcodec") or "").startswith("avc1")
+        if current is None or (is_avc1 and not (current.get("vcodec") or "").startswith("avc1")):
+            best_by_height[height] = f
+    return sorted(best_by_height.values(), key=lambda f: f["height"], reverse=True)
+
+
+def _prompt_format_choice(info: dict) -> tuple[str, list[dict]]:
+    formats = _list_video_formats(info)
+
+    print(f"\n{info.get('title', 'Video')}")
+    print("0) Best available (auto)")
+    for i, f in enumerate(formats, start=1):
+        size = f.get("filesize") or f.get("filesize_approx")
+        size_str = f"~{size / 1_048_576:.1f} MB" if size else "size unknown"
+        print(f"{i}) {f['height']}p  ({f.get('ext')}, {f.get('vcodec')})  {size_str}")
+    audio_choice = len(formats) + 1
+    print(f"{audio_choice}) Audio only (mp3)")
+
+    raw = input(f"Select quality [0]: ").strip() or "0"
+
+    if raw == str(audio_choice):
+        return "bestaudio/best", [
+            {"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "192"}
+        ]
+
+    if raw == "0" or not raw.isdigit() or not (1 <= int(raw) <= len(formats)):
+        return "bestvideo[vcodec^=avc1][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best", []
+
+    fmt = formats[int(raw) - 1]
+    return f"{fmt['format_id']}+bestaudio/best", []
+
+
 def download_video(url: str, output_dir: str = "downloads") -> None:
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    ydl_opts = {
-        "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
-        "outtmpl": f"{output_dir}/%(title)s.%(ext)s",
-        "merge_output_format": "mp4",
-        "noplaylist": True,
-        "progress_hooks": [_progress_hook],
-    }
-
+    base_opts = {"noplaylist": True, "quiet": True}
     ffmpeg_dir = _find_ffmpeg()
     if ffmpeg_dir:
-        ydl_opts["ffmpeg_location"] = ffmpeg_dir
+        base_opts["ffmpeg_location"] = ffmpeg_dir
+
+    with yt_dlp.YoutubeDL(base_opts) as ydl:
+        info = ydl.extract_info(url, download=False)
+
+    format_str, postprocessors = _prompt_format_choice(info)
+
+    ydl_opts = {
+        **base_opts,
+        "format": format_str,
+        "outtmpl": f"{output_dir}/%(title)s.%(ext)s",
+        "merge_output_format": "mp4",
+        "postprocessors": postprocessors,
+        "progress_hooks": [_progress_hook],
+        "quiet": False,
+    }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
