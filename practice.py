@@ -61,3 +61,5 @@ name="Sandesh Thapa"
 
 # print("a" in name) #this will check if a is present in name or not and return True or False
 
+# print ("x" not in name) #this will check if x is not present in name or not and return True or False
+
