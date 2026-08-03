@@ -54,7 +54,7 @@
 # print(random.random()) #generates random float number between 0 and 1
 
 
-name="Sandesh Thapa"
+name="Sandesh Thapa   "
 
 # for i in name:
 #     print(i) #this will print each character of the string in a new line
@@ -70,3 +70,12 @@ name="Sandesh Thapa"
 # print(name.upper()) #this will convert string to uppercase
 # print(name.lower()) #this will convert string to lowercase
 # print(name.title()) #this will convert first character of each word to uppercase
+
+# print(name.strip()) #this will remove any whitespace from the beginning or the end of the string
+
+# x=9
+# print(f"The value of x is {x:.2f}") #f-string is used to format string and it is available in python 3.6 and above
+
+# print(name.encode()) #this will encode the string to bytes
+
+# print(len(name)) #this will print the length of the string
