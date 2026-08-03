@@ -11,9 +11,11 @@
 
 """This is multiple line comment"""
 
-print(""" 
-This is multiple 
+# print(""" 
+# Practice of python programming
 
+# Happy coding
+# """)
 
-line comment
-""")
+# print("Hello World");print("Hello World");print("Hello World") # ; enables to write multiple statements in a single line
+
