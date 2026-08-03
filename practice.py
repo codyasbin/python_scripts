@@ -19,3 +19,5 @@
 
 # print("Hello World");print("Hello World");print("Hello World") # ; enables to write multiple statements in a single line
 
+print("Helloww", end=" ") # end is used to avoid new line after print statement
+print("Sandesh thapa") # end is used to avoid new line after print statement
