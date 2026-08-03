@@ -38,6 +38,14 @@
 # print(a,b,c)
 
 
-fruits=["apple","banana","cherry"] #list
-x,y,z=fruits #unpacking list , tuple works the same
-print(x,y,z)
+# fruits=["apple","banana","cherry"] #list
+# x,y,z=fruits #unpacking list , tuple works the same
+# print(x,y,z)
+
+# def function1():
+#     print("This is function 1")
+#     global local_variable #turning local variable to global variable so that it can be accessed outside the function
+#     local_variable = "This is local variable"
+
+# function1()
+# print(local_variable) #this will give error because local_variable is not defined in this scope
