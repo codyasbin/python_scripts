@@ -26,3 +26,18 @@
 
 # print("I am", 35, "years old.") # 35 is a int data type
 
+#casting variable to a specific data type
+# a = str(35) #casting int to string
+# print("I am", a, "years old.") # 35 is a string data type
+
+# #casting variable to a specific data type
+# a = int("35") #casting string to int
+# print("I am", a, "years old.") # 35 is a int data type
+
+# a,b,c="Sandesh","Thapa",35 #multiple variable assignment
+# print(a,b,c)
+
+
+fruits=["apple","banana","cherry"] #list
+x,y,z=fruits #unpacking list , tuple works the same
+print(x,y,z)
