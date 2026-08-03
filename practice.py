@@ -52,3 +52,12 @@
 
 # import random 
 # print(random.random()) #generates random float number between 0 and 1
+
+
+name="Sandesh Thapa"
+
+# for i in name:
+#     print(i) #this will print each character of the string in a new line
+
+# print("a" in name) #this will check if a is present in name or not and return True or False
+
