@@ -49,3 +49,6 @@
 
 # function1()
 # print(local_variable) #this will give error because local_variable is not defined in this scope
+
+# import random 
+# print(random.random()) #generates random float number between 0 and 1
