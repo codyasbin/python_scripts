@@ -79,3 +79,5 @@ name="Sandesh Thapa   "
 # print(name.encode()) #this will encode the string to bytes
 
 # print(len(name)) #this will print the length of the string
+
+# x=1 if "a" in name else 0 #this is a ternary operator which is used to assign value to a variable based on a condition
