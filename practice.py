@@ -10,3 +10,10 @@
 # print(sys.maxsize)
 
 """This is multiple line comment"""
+
+print(""" 
+This is multiple 
+
+
+line comment
+""")
