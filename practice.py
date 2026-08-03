@@ -63,3 +63,10 @@ name="Sandesh Thapa"
 
 # print ("x" not in name) #this will check if x is not present in name or not and return True or False
 
+# print(name[:4]) #this will print first 4 characters of the string
+# print(name[4:8]) #this will print characters from index 4 to index 8
+# print(name[-4:]) #this will print last 4 characters of the string
+
+# print(name.upper()) #this will convert string to uppercase
+# print(name.lower()) #this will convert string to lowercase
+# print(name.title()) #this will convert first character of each word to uppercase
