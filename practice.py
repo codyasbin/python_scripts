@@ -81,3 +81,8 @@ name="Sandesh Thapa   "
 # print(len(name)) #this will print the length of the string
 
 # x=1 if "a" in name else 0 #this is a ternary operator which is used to assign value to a variable based on a condition
+
+# identity operators 
+
+# print(x is y) #this will check if x is the same object as y and return True or False
+# print(x is not y) #this will check if x is not the same object as y and return True or False
