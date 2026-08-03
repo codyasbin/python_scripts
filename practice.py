@@ -86,3 +86,8 @@ name="Sandesh Thapa   "
 
 # print(x is y) #this will check if x is the same object as y and return True or False
 # print(x is not y) #this will check if x is not the same object as y and return True or False
+
+# membership operators
+
+# print("a" in name) #this will check if a is present in name and return True or False
+# print("a" not in name) #this will check if a is not present in name and return True or False
