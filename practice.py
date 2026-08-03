@@ -19,5 +19,10 @@
 
 # print("Hello World");print("Hello World");print("Hello World") # ; enables to write multiple statements in a single line
 
-print("Helloww", end=" ") # end is used to avoid new line after print statement
-print("Sandesh thapa") # end is used to avoid new line after print statement
+# print("Helloww", end=" ") # end is used to avoid new line after print statement
+# print("Sandesh thapa") # end is used to avoid new line after print statement
+
+# print(44)
+
+# print("I am", 35, "years old.") # 35 is a int data type
+
