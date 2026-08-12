@@ -1,4 +1,4 @@
-# import sys  
+# import sys
 
 # sys is a module that provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. basically a interpreter information as a module
 
@@ -11,7 +11,7 @@
 
 """This is multiple line comment"""
 
-# print(""" 
+# print("""
 # Practice of python programming
 
 # Happy coding
@@ -26,7 +26,7 @@
 
 # print("I am", 35, "years old.") # 35 is a int data type
 
-#casting variable to a specific data type
+# casting variable to a specific data type
 # a = str(35) #casting int to string
 # print("I am", a, "years old.") # 35 is a string data type
 
@@ -50,11 +50,11 @@
 # function1()
 # print(local_variable) #this will give error because local_variable is not defined in this scope
 
-# import random 
+# import random
 # print(random.random()) #generates random float number between 0 and 1
 
 
-name="Sandesh Thapa   "
+# name = "Sandesh Thapa   "
 
 # for i in name:
 #     print(i) #this will print each character of the string in a new line
@@ -82,7 +82,7 @@ name="Sandesh Thapa   "
 
 # x=1 if "a" in name else 0 #this is a ternary operator which is used to assign value to a variable based on a condition
 
-# identity operators 
+# identity operators
 
 # print(x is y) #this will check if x is the same object as y and return True or False
 # print(x is not y) #this will check if x is not the same object as y and return True or False
@@ -91,3 +91,21 @@ name="Sandesh Thapa   "
 
 # print("a" in name) #this will check if a is present in name and return True or False
 # print("a" not in name) #this will check if a is not present in name and return True or False
+
+#dict
+data = {'name': "sandesh", 'age': 23, 'address': "chitwan"}
+
+print(data)  # this will print the dictionary
+print(type(data))  # this will print the type of the variable
+
+for key in data:  # this will print the keys of the dictionary
+    print(key)
+
+for value in data.values():  # this will print the values of the dictionary
+    print(value)
+
+for key, value in data.items():  # this will print the keys and values of the dictionary
+    print(key, value)    
+
+print("true" if "name" in data else "false")  # this will check if name is present in data keys and return true or false
+print("true") if "sandesh" in data.values() else print("false") # this will check if sandesh is present in data values and return true or false
