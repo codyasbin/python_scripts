@@ -93,19 +93,46 @@
 # print("a" not in name) #this will check if a is not present in name and return True or False
 
 #dict
-data = {'name': "sandesh", 'age': 23, 'address': "chitwan"}
+# data = {'name': "sandesh", 'age': 23, 'address': "chitwan"}
 
-print(data)  # this will print the dictionary
-print(type(data))  # this will print the type of the variable
+# print(data)  # this will print the dictionary
+# print(type(data))  # this will print the type of the variable
 
-for key in data:  # this will print the keys of the dictionary
-    print(key)
+# for key in data:  # this will print the keys of the dictionary
+#     print(key)
 
-for value in data.values():  # this will print the values of the dictionary
-    print(value)
+# for value in data.values():  # this will print the values of the dictionary
+#     print(value)
 
-for key, value in data.items():  # this will print the keys and values of the dictionary
-    print(key, value)    
+# for key, value in data.items():  # this will print the keys and values of the dictionary
+#     print(key, value)    
 
-print("true" if "name" in data else "false")  # this will check if name is present in data keys and return true or false
-print("true") if "sandesh" in data.values() else print("false") # this will check if sandesh is present in data values and return true or false
+# print("true" if "name" in data else "false")  # this will check if name is present in data keys and return true or false
+# print("true") if "sandesh" in data.values() else print("false") # this will check if sandesh is present in data values and return true or false
+
+# data.update({"name": "sandesh thapa"})  # this will update the value of name key
+# print(data)
+
+# data.pop("age")  # this will remove the age key from the dictionary
+# print(data)
+
+# data.clear()  # this will remove all the keys and values from the dictionary
+# print(data)
+
+# data.values()  # this will return the values of the dictionary
+# print(data.values())
+
+# data.keys()  # this will return the keys of the dictionary
+# print(data.keys())
+
+# data.items()  # this will return the keys and values of the dictionary as a list of tuples
+
+# data.get("name")  # this will return the value of the name key
+
+# data["name"]  # this will return the value of the name key
+
+# # add the key value pair to the dictionary
+# data["gender"] = "male"  # this will add the key gender with value male to the dictionary
+# print(data)
+
+
