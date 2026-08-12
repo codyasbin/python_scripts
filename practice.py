@@ -95,6 +95,10 @@
 #dict
 # data = {'name': "sandesh", 'age': 23, 'address': "chitwan"}
 
+# for key,value in data.items():  # this will print the keys and values of the dictionary
+#     if value==23:
+#         print(key)  # this will print the key and value of the dictionary where value is 23
+
 # print(data)  # this will print the dictionary
 # print(type(data))  # this will print the type of the variable
 
@@ -136,3 +140,12 @@
 # print(data)
 
 
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear() #this will remove all the keys and values from the dictionary but the dictionary will still exist
+print(thisdict)
+del thisdict #this will delete the dictionary completely and it will not exist anymore
+print(thisdict)
