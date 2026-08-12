@@ -140,12 +140,88 @@
 # print(data)
 
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.clear() #this will remove all the keys and values from the dictionary but the dictionary will still exist
-print(thisdict)
-del thisdict #this will delete the dictionary completely and it will not exist anymore
-print(thisdict)
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.clear() #this will remove all the keys and values from the dictionary but the dictionary will still exist
+# print(thisdict)
+# del thisdict #this will delete the dictionary completely and it will not exist anymore
+# print(thisdict)
+
+
+# thisdict = [{
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# },
+# {
+#     "brand": "Toyota",
+#     "model": "Corolla",
+#     "year": 2020
+# },
+# {
+#     "brand": "Honda",
+#     "model": "Civic",
+#     "year": 2021
+# }
+# ]
+# thisdict.pop("model") #this will remove the model key from the dictionary
+# print(thisdict)
+
+
+# thisdict.popitem() #this will remove the last inserted key-value pair from the dictionary
+# print(thisdict)
+
+
+# newdict=thisdict.fromkeys(("brand", "model", "year"), 0) #this will create a new dictionary with the keys from the tuple and the value as 0
+# print(newdict)
+
+#sets
+# aset={"apple", "banana", "cherry"} #this is a set and it is unordered, unindexed, and does not allow duplicate values
+# bset={"google", "microsoft", "apple"} #this is a set and it is unordered, unindexed, and does not allow duplicate values
+# print(aset.intersection(bset)) #this will return the intersection of the two sets
+# print(aset.difference(bset)) #this will return the difference of the two sets i.e Aset only
+# print(bset.difference(aset)) #this will return the difference of the two sets i.e Bset only
+# print(aset.union(bset)) #this will return the union of the two sets
+# print(aset.issubset(bset)) #this will check if the first set is a subset of the second set and return True or False
+# print(aset.issuperset(bset)) #this will check if the first set is a superset of the second set and return True or False
+# print(aset.isdisjoint(bset)) #this will check if the two sets are disjoint and return True or False
+# #add
+# aset.add("microsoft") #this will add microsoft to the set
+# print(aset)
+# #remove
+# aset.remove("apple") #this will remove apple from the set
+# print(aset)
+# #discard
+# aset.discard("google") #this will remove google from the set
+# print(aset)
+# #pop
+# aset.pop() #this will remove the last element from the set
+# print(aset)
+# #clear
+# aset.clear() #this will clear the set
+# print(aset)
+
+""" random tip : think any data collection as a database and think any operation as a query and think any data as a table that means, any data collections should be able to CRUD (Create, Read, Update, Delete) which simply are as methods of the data collection, and also like in database, data collection should be able to perform operations like intersection, union, difference, subset, superset, disjoint etc. which are also methods of the data collection.
+and also like in database other than crud , joins. There are search, filter and sort which are also methods of the data collection. so basically to have a simple understanding you can map any data collection as a database and any operation as a query and any data as a table.
+"""
+
+
+# groupby operation in thisdict based on the year key
+
+thisdict = [
+  {"brand": "Ford", "model": "Mustang", "year": 1964},
+  {"brand": "Toyota", "model": "Corolla", "year": 2020},
+  {"brand": "Honda", "model": "Civic", "year": 2021},
+  {"brand": "Toyota", "model": "Camry", "year": 2022},
+  {"brand": "Honda", "model": "Accord", "year": 2023},]
+
+from itertools import groupby
+
+grouped = groupby(thisdict, key=lambda x: x["year"])
+for key, value in grouped:
+    print(key, list(value))
+
+
