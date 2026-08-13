@@ -236,51 +236,77 @@ fruits = [ "banana", "cherry","apple", "mango", "kiwi", "orange", "grape"]
 #crud
 
 #add
-numbers.append(6) #this will add 6 to the list at the end
-print(numbers)
-#remove
-numbers.remove(2) #this will remove 2 from the list
-print(numbers)
-#insert
-numbers.insert(2, 7) #this will insert 7 at index 2
-print(numbers)
-#pop
-numbers.pop() #this will remove the last element from the list
-print(numbers)
-#clear
-numbers.clear() #this will clear the list
-print(numbers)
+# numbers.append(6) #this will add 6 to the list at the end
+# print(numbers)
+# #remove
+# numbers.remove(2) #this will remove 2 from the list
+# print(numbers)
+# #insert
+# numbers.insert(2, 7) #this will insert 7 at index 2
+# print(numbers)
+# #pop
+# numbers.pop() #this will remove the last element from the list
+# print(numbers)
+# #clear
+# numbers.clear() #this will clear the list
+# print(numbers)
 
-#other operations in list
-#sort
-numbers.sort() #this will sort the list in ascending order if list is numbers and in alphabetical order if list is string
-print(numbers)
-#reverse
-numbers.reverse() #this will reverse the list
-print(numbers)
-#count
-print(numbers.count(1)) #this will count the number of 1 in the list
-#copy
-newlist = numbers.copy() #this will copy the list
-print(newlist)
+# #other operations in list
+# #sort
+# numbers.sort() #this will sort the list in ascending order if list is numbers and in alphabetical order if list is string
+# print(numbers)
+# #reverse
+# numbers.reverse() #this will reverse the list
+# print(numbers)
+# #count
+# print(numbers.count(1)) #this will count the number of 1 in the list
+# #copy
+# newlist = numbers.copy() #this will copy the list
+# print(newlist)
 
-#list comprehension
-newlist = [x for x in range(10)] #this will create a list of numbers from 0 to 9
-print(newlist)
-newlist = [x for x in range(10) if x % 2 == 0] #this will create a list of even numbers from 0 to 9
-print(newlist)
+# #list comprehension
+# newlist = [x for x in range(10)] #this will create a list of numbers from 0 to 9
+# print(newlist)
+# newlist = [x for x in range(10) if x % 2 == 0] #this will create a list of even numbers from 0 to 9
+# print(newlist)
 
-#generator expression
-newlist = (x for x in range(10)) #this will create a generator expression of numbers from 0 to 9
-print(newlist)
-newlist = (x for x in range(10) if x % 2 == 0) #this will create a generator expression of even numbers from 0 to 9
-print(newlist)
+# #generator expression
+# newlist = (x for x in range(10)) #this will create a generator expression of numbers from 0 to 9
+# print(newlist)
+# newlist = (x for x in range(10) if x % 2 == 0) #this will create a generator expression of even numbers from 0 to 9
+# print(newlist)
 
-#map and filters
-numbers = [1, 2, 3, 4, 5]
-doubled = list(map(lambda x: x * 2, numbers))
-print(doubled)
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-print(even_numbers)
-product = reduce(lambda x, y: x * y, numbers)
-print(product)
+# #map and filters
+# numbers = [1, 2, 3, 4, 5]
+# doubled = list(map(lambda x: x * 2, numbers))
+# print(doubled)
+# even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+# print(even_numbers)
+# product = reduce(lambda x, y: x * y, numbers)
+# print(product)
+
+
+# a=1
+# b=lambda x: x**2
+# print(b(a))
+
+
+#lambda function is an anonymous function which can take any number of arguments but can only have one expression. It is used when we need a small function for a short period of time and we don't want to give it a name. It is also used when we want to pass a function as an argument to another function. and it also can be used as callback function in built in functions like map, filter, reduce
+
+# a lambda function i.e lambda x: x**2 is a function that takes one argument x and returns x squared is equal to def function1(x):
+#     return x**2
+
+def check_even(number):
+    return number % 2 == 0
+
+newList=list(map( lambda x: x**2, numbers)) #this will create a list of numbers squared
+print(newList) #this will print the list
+
+filteredList=list(filter(check_even, numbers)) #this will create a list of even numbers from the newList
+print(filteredList) #this will print the list
+
+newList=list(map( lambda x: x%2==0, numbers)) #this will create a list of boolean values indicating even numbers
+print(newList) #this will print the list
+
+fruits_uppercase=list(map(lambda x: x.upper(), fruits)) #this will create a list of fruits in uppercase
+print(fruits_uppercase) #this will print the list
