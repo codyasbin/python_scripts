@@ -227,11 +227,11 @@ and also like in database other than crud , joins. There are search, filter and 
 
 #list
 
-from functools import reduce
+# from functools import reduce
 
 
-numbers = [1, 2, 3, 4, 5]
-fruits = [ "banana", "cherry","apple", "mango", "kiwi", "orange", "grape"]
+# numbers = [1, 2, 3, 4, 5]
+# fruits = [ "banana", "cherry","apple", "mango", "kiwi", "orange", "grape"]
 
 #crud
 
@@ -296,17 +296,19 @@ fruits = [ "banana", "cherry","apple", "mango", "kiwi", "orange", "grape"]
 # a lambda function i.e lambda x: x**2 is a function that takes one argument x and returns x squared is equal to def function1(x):
 #     return x**2
 
-def check_even(number):
-    return number % 2 == 0
+# def check_even(number):
+#     return number % 2 == 0
 
-newList=list(map( lambda x: x**2, numbers)) #this will create a list of numbers squared
-print(newList) #this will print the list
+# newList=list(map( lambda x: x**2, numbers)) #this will create a list of numbers squared
+# print(newList) #this will print the list
 
-filteredList=list(filter(check_even, numbers)) #this will create a list of even numbers from the newList
-print(filteredList) #this will print the list
+# filteredList=list(filter(check_even, numbers)) #this will create a list of even numbers from the newList
+# print(filteredList) #this will print the list
 
-newList=list(map( lambda x: x%2==0, numbers)) #this will create a list of boolean values indicating even numbers
-print(newList) #this will print the list
+# newList=list(map( lambda x: x%2==0, numbers)) #this will create a list of boolean values indicating even numbers
+# print(newList) #this will print the list
 
-fruits_uppercase=list(map(lambda x: x.upper(), fruits)) #this will create a list of fruits in uppercase
-print(fruits_uppercase) #this will print the list
+# fruits_uppercase=list(map(lambda x: x.upper(), fruits)) #this will create a list of fruits in uppercase
+# print(fruits_uppercase) #this will print the list
+
+
