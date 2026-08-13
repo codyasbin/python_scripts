@@ -211,17 +211,76 @@ and also like in database other than crud , joins. There are search, filter and 
 
 # groupby operation in thisdict based on the year key
 
-thisdict = [
-  {"brand": "Ford", "model": "Mustang", "year": 1964},
-  {"brand": "Toyota", "model": "Corolla", "year": 2020},
-  {"brand": "Honda", "model": "Civic", "year": 2021},
-  {"brand": "Toyota", "model": "Camry", "year": 2022},
-  {"brand": "Honda", "model": "Accord", "year": 2023},]
+# thisdict = [
+#   {"brand": "Ford", "model": "Mustang", "year": 1964},
+#   {"brand": "Toyota", "model": "Corolla", "year": 2020},
+#   {"brand": "Honda", "model": "Civic", "year": 2021},
+#   {"brand": "Toyota", "model": "Camry", "year": 2022},
+#   {"brand": "Honda", "model": "Accord", "year": 2023},]
 
-from itertools import groupby
+# from itertools import groupby
 
-grouped = groupby(thisdict, key=lambda x: x["year"])
-for key, value in grouped:
-    print(key, list(value))
+# grouped = groupby(thisdict, key=lambda x: x["year"])
+# for key, value in grouped:
+#     print(key, list(value))
 
 
+#list
+
+from functools import reduce
+
+
+numbers = [1, 2, 3, 4, 5]
+fruits = [ "banana", "cherry","apple", "mango", "kiwi", "orange", "grape"]
+
+#crud
+
+#add
+numbers.append(6) #this will add 6 to the list at the end
+print(numbers)
+#remove
+numbers.remove(2) #this will remove 2 from the list
+print(numbers)
+#insert
+numbers.insert(2, 7) #this will insert 7 at index 2
+print(numbers)
+#pop
+numbers.pop() #this will remove the last element from the list
+print(numbers)
+#clear
+numbers.clear() #this will clear the list
+print(numbers)
+
+#other operations in list
+#sort
+numbers.sort() #this will sort the list in ascending order if list is numbers and in alphabetical order if list is string
+print(numbers)
+#reverse
+numbers.reverse() #this will reverse the list
+print(numbers)
+#count
+print(numbers.count(1)) #this will count the number of 1 in the list
+#copy
+newlist = numbers.copy() #this will copy the list
+print(newlist)
+
+#list comprehension
+newlist = [x for x in range(10)] #this will create a list of numbers from 0 to 9
+print(newlist)
+newlist = [x for x in range(10) if x % 2 == 0] #this will create a list of even numbers from 0 to 9
+print(newlist)
+
+#generator expression
+newlist = (x for x in range(10)) #this will create a generator expression of numbers from 0 to 9
+print(newlist)
+newlist = (x for x in range(10) if x % 2 == 0) #this will create a generator expression of even numbers from 0 to 9
+print(newlist)
+
+#map and filters
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, numbers))
+print(doubled)
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+product = reduce(lambda x, y: x * y, numbers)
+print(product)
