@@ -311,4 +311,14 @@ and also like in database other than crud , joins. There are search, filter and 
 # fruits_uppercase=list(map(lambda x: x.upper(), fruits)) #this will create a list of fruits in uppercase
 # print(fruits_uppercase) #this will print the list
 
+#conditional statements
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+#ternary operator
+print("a is greater than b") if a > b else  print("b is greater than a") if b > a else print("a and b are equal")
 
