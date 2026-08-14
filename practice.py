@@ -415,6 +415,19 @@ finally:
     # code that will always execute
     print("This will always execute")
 
+#raising error using raise keyword
+# raise ValueError("This is a value error") #this will raise a value error with the message "This is a value error"
+
+try:
+    a=3
+    b=2
+    if a>b:
+        raise ValueError("a is greater than b") #this will raise a value error with the message "a is greater than b"
+    else:
+        print("b is greater than a")
+except ValueError as e:
+    print(f"An error occurred: {e}")
+
 
 
 
