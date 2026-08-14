@@ -348,15 +348,74 @@ numbers=[5,7,2,9,1,3]
 # print(numbers[0])
 
 
-def find_greatest_number(numbers:list):
-    for i in range(len(numbers)-1):
-        if numbers[0] > numbers[1]:
-            numbers.pop(1)
-        else:
-            numbers.pop(0)
-        if len(numbers) == 1:
-            break
-    return numbers[0]
+# def find_greatest_number(numbers:list):
+#     for i in range(len(numbers)-1):
+#         if numbers[0] > numbers[1]:
+#             numbers.pop(1)
+#         else:
+#             numbers.pop(0)
+#         if len(numbers) == 1:
+#             break
+#     return numbers[0]
 
 
-print(find_greatest_number(numbers))
+# print(find_greatest_number(numbers))
+
+""" Types of Error and Error Handling in Python.
+Error Types:
+1. Syntax Error: This occurs when the code is not written in the correct syntax of the programming language. For example, missing a colon at the end of an if statement or using an undefined variable.
+2. Name Error: This occurs when a variable or function is not defined in the current scope. For example, trying to access a variable that has not been declared or calling a function that does not exist.
+3. Type Error: This occurs when an operation is performed on a variable of the wrong type. For example, trying to add a string and an integer or calling a method that is not applicable to the variable's type.
+4. Value Error: This occurs when a function receives an argument of the correct type but an invalid value. For example, trying to convert a string to an integer that is not a number.
+5. ZeroDivisionError: This occurs when trying to divide a number by zero.
+6. IndexError: This occurs when trying to access an index of a list that is out of range.
+7. KeyError: This occurs when trying to access a key in a dictionary that does not exist.
+8. AttributeError: This occurs when trying to access an attribute of an object that does not exist.
+9. ImportError: This occurs when trying to import a module that does not exist.
+10. ModuleNotFoundError: This occurs when trying to import a module that does not exist.
+11. OSError: This occurs when an operation on a file or directory fails due to an operating system error.
+12. FileNotFoundError: This occurs when trying to access a file that does not exist.
+13. KeyboardInterrupt: This occurs when the user interrupts the execution of a program using the keyboard.
+14. MemoryError: This occurs when the interpreter runs out of memory.
+15. RecursionError: This occurs when the interpreter runs out of stack space.
+
+
+Error Handling:
+Error handling in Python is a way to handle errors that occur during the execution of a program. It is a way to prevent the program from crashing and to provide a better error message to the user.
+Error handling in Python is done using try and except blocks.
+
+try:
+  # code that may raise an error
+except Exception as e:
+  # code to handle the error
+  print(f"An error occurred: {e}")
+
+"""
+
+# handle error specifically using try and except block
+try:
+    # code that may raise an error
+    x = 1 / 0
+except ZeroDivisionError as e:
+    # code to handle the error
+    print(f"An error occurred: {e}")
+finally:
+    # code that will always execute
+    print("This will always execute")
+
+
+# handle error universally using try and except block
+try:
+    # code that may raise an error
+    x = 1 / 0
+except Exception as e:
+    # code to handle the error
+    print(f"An error occurred: {e}")
+finally:
+    # code that will always execute
+    print("This will always execute")
+
+
+
+
+
