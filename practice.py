@@ -312,13 +312,51 @@ and also like in database other than crud , joins. There are search, filter and 
 # print(fruits_uppercase) #this will print the list
 
 #conditional statements
-a = 33
-b = 33
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
+# a = 33
+# b = 33
+# if b > a:
+#   print("b is greater than a")
+# elif a == b:
+#   print("a and b are equal")
 
-#ternary operator
-print("a is greater than b") if a > b else  print("b is greater than a") if b > a else print("a and b are equal")
+# #ternary operator
+# print("a is greater than b") if a > b else  print("b is greater than a") if b > a else print("a and b are equal")
 
+# for x in range(3):
+#   print(x)
+
+numbers=[5,7,2,9,1,3]
+# print the greatest number in the list
+# filter the greater number than first value in the list and if there are remove smaller one and kepe on filtering unitll len is 1 and print the last remaining number
+
+# for i in range(len(numbers)-1):
+#     numbers = list(filter(lambda x: x > numbers[0], numbers))
+#     if len(numbers) == 1:
+#         break
+# print(numbers[0])
+
+
+# check first two numbers in the list and if first number is greater than second number then remove second number from the list and if second number is greater than first number then remove first number from the list and keep on checking unitl len is 1 and print the last remaining number
+
+# for i in range(len(numbers)-1):
+#     if numbers[0] > numbers[1]:
+#         numbers.pop(1)
+#     else:
+#         numbers.pop(0)
+#     if len(numbers) == 1:
+#         break
+# print(numbers[0])
+
+
+def find_greatest_number(numbers:list):
+    for i in range(len(numbers)-1):
+        if numbers[0] > numbers[1]:
+            numbers.pop(1)
+        else:
+            numbers.pop(0)
+        if len(numbers) == 1:
+            break
+    return numbers[0]
+
+
+print(find_greatest_number(numbers))
