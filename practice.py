@@ -392,41 +392,43 @@ except Exception as e:
 
 """
 
-# handle error specifically using try and except block
-try:
-    # code that may raise an error
-    x = 1 / 0
-except ZeroDivisionError as e:
-    # code to handle the error
-    print(f"An error occurred: {e}")
-finally:
-    # code that will always execute
-    print("This will always execute")
+# # handle error specifically using try and except block
+# try:
+#     # code that may raise an error
+#     x = 1 / 0
+# except ZeroDivisionError as e:
+#     # code to handle the error
+#     print(f"An error occurred: {e}")
+# finally:
+#     # code that will always execute
+#     print("This will always execute")
 
 
-# handle error universally using try and except block
-try:
-    # code that may raise an error
-    x = 1 / 0
-except Exception as e:
-    # code to handle the error
-    print(f"An error occurred: {e}")
-finally:
-    # code that will always execute
-    print("This will always execute")
+# # handle error universally using try and except block
+# try:
+#     # code that may raise an error
+#     x = 1 / 0
+# except Exception as e:
+#     # code to handle the error
+#     print(f"An error occurred: {e}")
+# finally:
+#     # code that will always execute
+#     print("This will always execute")
 
-#raising error using raise keyword
-# raise ValueError("This is a value error") #this will raise a value error with the message "This is a value error"
+# #raising error using raise keyword
+# # raise ValueError("This is a value error") #this will raise a value error with the message "This is a value error"
 
-try:
-    a=3
-    b=2
-    if a>b:
-        raise ValueError("a is greater than b") #this will raise a value error with the message "a is greater than b"
-    else:
-        print("b is greater than a")
-except ValueError as e:
-    print(f"An error occurred: {e}")
+# try:
+#     a=3
+#     b=2
+#     if a>b:
+#         raise ValueError("a is greater than b") #this will raise a value error with the message "a is greater than b"
+#     else:
+#         print("b is greater than a")
+# except ValueError as e:
+#     print(f"An error occurred: {e}")
+
+
 
 
 
