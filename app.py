@@ -1,4 +1,4 @@
-from codyasbin import Codyasbin
+from core import Codyasbin
 
 cody = Codyasbin()
 print(cody.help())
