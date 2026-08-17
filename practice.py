@@ -428,7 +428,17 @@ except Exception as e:
 # except ValueError as e:
 #     print(f"An error occurred: {e}")
 
+# cars=["Ford", "Volvo", "BMW"]
 
+# def get_car(cars):
+#     for i in cars:
+#         yield i #yield is used to return a generator object which can be iterated over and it is used to create a generator function which can be used to create an iterator object
+
+# cars=get_car(cars) #this will return a generator object which can be iterated over
+
+# print(next(cars)) #this will return the first value of the generator object
+# print(next(cars)) #this will return the second value of the generator object
+# print(next(cars)) #this will return the third value of the generator object
 
 
 
