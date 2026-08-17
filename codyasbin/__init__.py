@@ -1,1 +1,1 @@
-from core import *  # __init__.py contains all the necessary imports for the codyasbin library so that user can just write "from codyasbin import *" to use the library.
+from .core import *  # Re-export package symbols for convenient imports.
