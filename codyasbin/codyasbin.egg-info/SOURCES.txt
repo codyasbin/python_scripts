@@ -1,0 +1,6 @@
+core.py
+pyproject.toml
+codyasbin.egg-info/PKG-INFO
+codyasbin.egg-info/SOURCES.txt
+codyasbin.egg-info/dependency_links.txt
+codyasbin.egg-info/top_level.txt
