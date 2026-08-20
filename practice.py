@@ -464,3 +464,8 @@ except Exception as e:
 # print("type of a is", type(a)) #this will print the type of the iterator object
 # print("type of numbers is", type(numbers)) #this will print the type of the generator
 
+# from module import method_one, method_two
+
+# method_one("apple", "banana", "cherry")
+# method_two("Argument for method two")'
+
