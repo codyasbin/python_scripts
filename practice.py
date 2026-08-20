@@ -326,6 +326,7 @@ and also like in database other than crud , joins. There are search, filter and 
 #   print(x)
 
 import math
+import re
 
 
 numbers=[5,7,2,9,1,3]
@@ -562,14 +563,23 @@ except Exception as e:
 
 # print(x, y, z)
 
-import json
+# import json
 
-# json is a module that provides functions for working with JSON data. It can be used to convert Python objects to JSON and vice versa.
+# # json is a module that provides functions for working with JSON data. It can be used to convert Python objects to JSON and vice versa.
 
-json_data = '{"name": "John", "age": 30, "city": "New York"}'
-python_data = json.loads(json_data) #this will convert the JSON data to a Python object
-print(python_data)
+# json_data = '{"name": "John", "age": 30, "city": "New York"}'
+# python_data = json.loads(json_data) #this will convert the JSON data to a Python object
+# print(python_data)
 
-python_data = {"name": "John", "age": 30, "city": "New York"}
-json_data = json.dumps(python_data) #this will convert the Python object to JSON data
-print(json_data) 
+# python_data = {"name": "John", "age": 30, "city": "New York"}
+# json_data = json.dumps(python_data) #this will convert the Python object to JSON data
+# print(json_data) 
+
+txt = "The rain in Spain"
+x = re.findall("ai", txt) #returns a list of all occurrences of the pattern "ai" in the string txt using regex module. If no occurrences are found, it returns an empty list. The re module provides support for regular expressions in Python, allowing for complex pattern matching and text manipulation.
+print(x)
+
+z=re.search("ai", txt) #searches for the first occurrence of the pattern "ai" in the string txt using regex module. If found, it returns a match object; otherwise, it returns None. The re module provides support for regular expressions in Python, enabling advanced text searching and manipulation capabilities.
+
+print(z)
+
