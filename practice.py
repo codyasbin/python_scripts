@@ -325,6 +325,9 @@ and also like in database other than crud , joins. There are search, filter and 
 # for x in range(3):
 #   print(x)
 
+import math
+
+
 numbers=[5,7,2,9,1,3]
 # print the greatest number in the list
 # filter the greater number than first value in the list and if there are remove smaller one and kepe on filtering unitll len is 1 and print the last remaining number
@@ -490,5 +493,73 @@ except Exception as e:
 # y= datetime.datetime(2024, 6, 1, 12, 0, 0)
 # print(y.strftime("%A")) #this will print the day of the week for the given date
 
+
+# Math module is a built in module that provides mathematical functions and constants. It can be used to perform mathematical operations like square root, power, trigonometric functions, logarithmic functions, etc.
+
+#find the greates number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(max(numbers))
+
+# #find the smallest number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(min(numbers))
+
+# #find the sum of the numbers
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(sum(numbers))
+
+# #find the average of the numbers
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(sum(numbers) / len(numbers))
+
+# #find the square root of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.sqrt(numbers[0]))  # Assuming you want the square root of the first number
+
+# #find the power of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.pow(numbers[0], 2))  # Assuming you want the square of the first number
+
+# #find the log of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.log(numbers[0]))
+
+# #find the factorial of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.factorial(numbers[0]))
+
+# #find the remainder of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(numbers[0] % 2)
+
+# #find the absolute value of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(abs(numbers[0]))
+
+# #find the sin of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.sin(numbers[0]))
+
+# #find the cos of the number
+
+# numbers = [5, 7, 2, 9, 1, 3]
+# print(math.cos(numbers[0]))
+ 
+# x = math.ceil(1.4) #this will return the smallest integer greater than or equal to 1.4
+# y = math.floor(1.4) #this will return the largest integer less than or equal to 1.4
+# z = math.trunc(1.4) #this will return the integer part of 1.4
+
+# print(x, y, z)
 
 
