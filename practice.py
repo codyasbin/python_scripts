@@ -469,3 +469,10 @@ except Exception as e:
 # method_one("apple", "banana", "cherry")
 # method_two("Argument for method two")'
 
+# from module import  data
+
+# print(type(data)) #this will print the type of the variable data)
+
+import module as m
+
+print(m.data)
