@@ -488,5 +488,7 @@ except Exception as e:
 # print(x)
 
 # y= datetime.datetime(2024, 6, 1, 12, 0, 0)
-# print(y)
+# print(y.strftime("%A")) #this will print the day of the week for the given date
+
+
 
