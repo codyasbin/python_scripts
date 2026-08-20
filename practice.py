@@ -473,6 +473,20 @@ except Exception as e:
 
 # print(type(data)) #this will print the type of the variable data)
 
-import module as m
+# import module as m
 
-print(m.data)
+# print(m.data)
+
+# import platform #built in module that provides information about the platform on which the program is running. It can be used to get information about the operating system, architecture, and other details.
+
+# x = platform.system()
+# print(x)
+
+# import datetime #built in module that provides classes for manipulating dates and times. It can be used to get the current date and time, format dates and times, and perform arithmetic on dates and times.
+
+# x = datetime.datetime.now()
+# print(x)
+
+# y= datetime.datetime(2024, 6, 1, 12, 0, 0)
+# print(y)
+
