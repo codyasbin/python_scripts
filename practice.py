@@ -445,5 +445,21 @@ except Exception as e:
 # codyasbin = Codyasbin()
 # print(codyasbin.description) #this will print the description of codyasbin.description
 
+# numbers = [5, 7, 2, 9, 1, 3]
 
+# a=iter(numbers) #this will return an iterator object which can be iterated over
 
+# print(next(a)) #this will return the first value of the iterator object
+# print(next(a)) #this will return the second value of the iterator object      
+
+# def get_num(numbers):
+#     for i in numbers:
+#         yield i #yield is used to return a generator object which can be iterated over and it is used to create a generator function which can be used to create an iterator object
+
+# numbers=get_num(numbers) #this will return a generator object which can be iterated over
+
+# print(next(numbers)) #this will return the first value of the generator object
+# print(next(numbers)) #this will return the second value of the generator object
+
+# print("type of a is", type(a)) #this will print the type of the iterator object
+# print("type of numbers is", type(numbers)) #this will print the type of the generator
