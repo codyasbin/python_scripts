@@ -440,7 +440,10 @@ except Exception as e:
 # print(next(cars)) #this will return the second value of the generator object
 # print(next(cars)) #this will return the third value of the generator object
 
+# from core import Codyasbin 
 
+# codyasbin = Codyasbin()
+# print(codyasbin.description) #this will print the description of codyasbin.description
 
 
 
