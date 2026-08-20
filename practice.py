@@ -562,4 +562,14 @@ except Exception as e:
 
 # print(x, y, z)
 
+import json
 
+# json is a module that provides functions for working with JSON data. It can be used to convert Python objects to JSON and vice versa.
+
+json_data = '{"name": "John", "age": 30, "city": "New York"}'
+python_data = json.loads(json_data) #this will convert the JSON data to a Python object
+print(python_data)
+
+python_data = {"name": "John", "age": 30, "city": "New York"}
+json_data = json.dumps(python_data) #this will convert the Python object to JSON data
+print(json_data) 
