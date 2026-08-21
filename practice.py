@@ -597,4 +597,36 @@ except Exception as e:
 4. Inheritance: Inheritance is the concept of creating a new class that is based on an existing class. The new class inherits the attributes and methods of the existing class, allowing for code reuse and extension. In Python, inheritance is achieved by passing the parent class as an argument to the child class.
 5. Polymorphism: Polymorphism is the concept of using a single interface to represent different types of objects. In Python, this is achieved through method overriding and operator overloading, allowing for flexibility and adaptability in code design.
 6. Abstraction: Abstraction is the concept of simplifying complex systems by breaking them down into smaller, more manageable parts. In Python, this is achieved through the use of abstract classes and interfaces, which define a set of methods that must be implemented by any subclass.
+7. __init__ method: The __init__ method is a special method in Python classes that is called when an object is created. It is used to initialize the attributes of the object and set its initial state. The __init__ method takes self as its first parameter, which refers to the instance of the class being created.
 """
+
+
+class Counter:
+    name="Sandesh Thapa" # this is class property which is available to all the objects of the class and it is shared among all the objects of the class
+    def __init__(self,number): #this function runs intially when the object is created and it initializes the count variable to 0 and also intializes the variables that can be availabe to other methods of the class as self.variable_name
+        self.count = number*0 #this is instance property which is available to all the methods of the class and it is unique to each object of the class
+
+    def increment(self):
+        self.count += 1
+
+    def decrement(self):
+        self.count -= 1
+
+    def reset(self):
+        self.count = 0
+
+    def get_count(self):
+        return self.count
+
+C=Counter(1)
+print("Count is", C.get_count()) #this will print the current count which is 0
+C.increment()
+print("Count is", C.get_count())
+C.increment()
+print("Count is", C.get_count())
+C.increment()
+print("Count is", C.get_count())
+C.decrement()
+print("Count is", C.get_count())
+C.reset()
+print("Count is", C.get_count())    
