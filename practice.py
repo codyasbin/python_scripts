@@ -685,3 +685,59 @@ except Exception as e:
 #     print("Error: Cannot access private property '__age' directly.")
 
 # print(p1.get_age()) #private property can be accessed through the method of the class
+
+"""private method is a method that is not accessible outside the class. It can only be accessed through methods of the class. In Python, private methods are denoted by a leading underscore."""
+
+# class Calculator:
+#   def __init__(self):
+#     self.result = 0
+
+#   def __validate(self, num):
+#     if not isinstance(num, (int, float)):
+#       return False
+#     return True
+
+#   def add(self, num):
+#     if self.__validate(num):
+#       self.result += num
+#     else:
+#       print("Invalid number")
+
+# calc = Calculator()
+# calc.add(10)
+# calc.add(5)
+# print(calc.result)
+# calc.__validate(5) # This would cause an error 
+
+# __ double underscore is used to create private methods and properties in python. It is used to prevent the method or property from being accessed outside the class. It is also used to prevent the method or property from being overridden in the child class.
+
+"""classes can be nested like parent and child functions. A class can be defined inside another class. The inner class can access the attributes and methods of the outer class. The outer class can also access the attributes and methods of the inner class. This is useful when we want to group related classes together."""
+
+# class Car:
+#   def __init__(self, brand, model):
+#     self.brand = brand
+#     self.model = model
+#     self.engine = self.Engine()
+
+#   class Engine:
+#     def __init__(self):
+#       self.status = "Off"
+
+#     def start(self):
+#       self.status = "Running"
+#       print("Engine started")
+
+#     def stop(self):
+#       self.status = "Off"
+#       print("Engine stopped")
+
+#   def drive(self):
+#     if self.engine.status == "Running":
+#       print(f"Driving the {self.brand} {self.model}")
+#     else:
+#       print("Start the engine first!")
+
+# car = Car("Toyota", "Corolla")
+# car.drive()
+# car.engine.start()
+# car.drive()
