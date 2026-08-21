@@ -575,11 +575,26 @@ except Exception as e:
 # json_data = json.dumps(python_data) #this will convert the Python object to JSON data
 # print(json_data) 
 
-txt = "The rain in Spain"
-x = re.findall("ai", txt) #returns a list of all occurrences of the pattern "ai" in the string txt using regex module. If no occurrences are found, it returns an empty list. The re module provides support for regular expressions in Python, allowing for complex pattern matching and text manipulation.
-print(x)
+# txt = "The rain in Spain"
+# x = re.findall("ai", txt) #returns a list of all occurrences of the pattern "ai" in the string txt using regex module. If no occurrences are found, it returns an empty list. The re module provides support for regular expressions in Python, allowing for complex pattern matching and text manipulation.
+# print(x)
 
-z=re.search("ai", txt) #searches for the first occurrence of the pattern "ai" in the string txt using regex module. If found, it returns a match object; otherwise, it returns None. The re module provides support for regular expressions in Python, enabling advanced text searching and manipulation capabilities.
+# z=re.search("ai", txt) #searches for the first occurrence of the pattern "ai" in the string txt using regex module. If found, it returns a match object; otherwise, it returns None. The re module provides support for regular expressions in Python, enabling advanced text searching and manipulation capabilities.
 
-print(z)
+# print(z)
 
+# try:
+#     x = 4/2
+#     if x > 1:
+#         raise ValueError("x is greater than 1") #this will raise a value error with the message "x is greater than 1"
+# except Exception as e:
+#     print(f"An error occurred: {e}")
+
+""" OOP (Object Oriented Programming) in Python is a programming paradigm that uses objects and classes to organize code. It allows for encapsulation, inheritance, and polymorphism, making it easier to manage and maintain complex codebases. In Python, everything is an object, and classes are used to create new types of objects.
+1. Class: A class is a blueprint for creating objects. It defines the attributes and methods that the objects created from the class will have. In Python, classes are defined using the 'class' keyword.
+2. Object: An object is an instance of a class. It is created from a class and has its own unique identity and state. In Python, objects are created by calling the class as if it were a function.
+3. Encapsulation: Encapsulation is the concept of hiding the internal details of an object and exposing only the necessary information. In Python, this is achieved by using private attributes and methods, which are denoted by a leading underscore.
+4. Inheritance: Inheritance is the concept of creating a new class that is based on an existing class. The new class inherits the attributes and methods of the existing class, allowing for code reuse and extension. In Python, inheritance is achieved by passing the parent class as an argument to the child class.
+5. Polymorphism: Polymorphism is the concept of using a single interface to represent different types of objects. In Python, this is achieved through method overriding and operator overloading, allowing for flexibility and adaptability in code design.
+6. Abstraction: Abstraction is the concept of simplifying complex systems by breaking them down into smaller, more manageable parts. In Python, this is achieved through the use of abstract classes and interfaces, which define a set of methods that must be implemented by any subclass.
+"""
