@@ -595,38 +595,73 @@ except Exception as e:
 2. Object: An object is an instance of a class. It is created from a class and has its own unique identity and state. In Python, objects are created by calling the class as if it were a function.
 3. Encapsulation: Encapsulation is the concept of hiding the internal details of an object and exposing only the necessary information. In Python, this is achieved by using private attributes and methods, which are denoted by a leading underscore.
 4. Inheritance: Inheritance is the concept of creating a new class that is based on an existing class. The new class inherits the attributes and methods of the existing class, allowing for code reuse and extension. In Python, inheritance is achieved by passing the parent class as an argument to the child class.
-5. Polymorphism: Polymorphism is the concept of using a single interface to represent different types of objects. In Python, this is achieved through method overriding and operator overloading, allowing for flexibility and adaptability in code design.
+5. Polymorphism: "Polymorphism is the concept of making a same name method on different classes to perform different tasks. In Python, polymorphism is achieved through method overriding, where a child class can provide its own implementation of a method that is already defined in the parent class.
 6. Abstraction: Abstraction is the concept of simplifying complex systems by breaking them down into smaller, more manageable parts. In Python, this is achieved through the use of abstract classes and interfaces, which define a set of methods that must be implemented by any subclass.
 7. __init__ method: The __init__ method is a special method in Python classes that is called when an object is created. It is used to initialize the attributes of the object and set its initial state. The __init__ method takes self as its first parameter, which refers to the instance of the class being created.
 """
 
 
-class Counter:
-    name="Sandesh Thapa" # this is class property which is available to all the objects of the class and it is shared among all the objects of the class
-    def __init__(self,number): #this function runs intially when the object is created and it initializes the count variable to 0 and also intializes the variables that can be availabe to other methods of the class as self.variable_name
-        self.count = number*0 #this is instance property which is available to all the methods of the class and it is unique to each object of the class
+# class Counter:
+#     name="Sandesh Thapa" # this is class property which is available to all the objects of the class and it is shared among all the objects of the class
+#     def __init__(self,number): #this function runs intially when the object is created and it initializes the count variable to 0 and also intializes the variables that can be availabe to other methods of the class as self.variable_name
+#         self.count = number*0 #this is instance property which is available to all the methods of the class and it is unique to each object of the class
 
-    def increment(self):
-        self.count += 1
+#     def increment(self):
+#         self.count += 1
 
-    def decrement(self):
-        self.count -= 1
+#     def decrement(self):
+#         self.count -= 1
 
-    def reset(self):
-        self.count = 0
+#     def reset(self):
+#         self.count = 0
 
-    def get_count(self):
-        return self.count
+#     def get_count(self):
+#         return self.count
 
-C=Counter(1)
-print("Count is", C.get_count()) #this will print the current count which is 0
-C.increment()
-print("Count is", C.get_count())
-C.increment()
-print("Count is", C.get_count())
-C.increment()
-print("Count is", C.get_count())
-C.decrement()
-print("Count is", C.get_count())
-C.reset()
-print("Count is", C.get_count())    
+# C=Counter(1)
+# print("Count is", C.get_count()) #this will print the current count which is 0
+# C.increment()
+# print("Count is", C.get_count())
+# C.increment()
+# print("Count is", C.get_count())
+# C.increment()
+# print("Count is", C.get_count())
+# C.decrement()
+# print("Count is", C.get_count())
+# C.reset()
+# print("Count is", C.get_count())    
+
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+
+#   def __str__(self): #this method is called when the object is printed , a special method that is called when the object is printed and it returns a string representation of the object
+#     return f"{self.name} ({self.age})"
+
+# p1 = Person("Tobias", 36)
+# print(p1)
+
+"""Inheritance example in python"""
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def speak(self):
+#         raise NotImplementedError("Subclasses must implement this method")
+
+# class Dog(Animal):
+#     def speak(self):
+#         return f"{self.name} says Woof!"
+
+# class Cat(Animal):
+#     def speak(self):
+#         return f"{self.name} says Meow!"
+
+# dog = Dog("Fido")
+# cat = Cat("Whiskers")
+
+# print(dog.speak()) # Output: Fido says Woof!
+# print(cat.speak()) # Output: Whiskers says Meow!
+
+"""without super function a child class can override the parent class constructor and the parent class constructor will not be called. But with super function a child class can call the parent class constructor and the parent class constructor will be called. This is useful when we want to initialize the parent class attributes in the child class constructor."""
