@@ -748,3 +748,110 @@ except Exception as e:
 f = open("example.txt", "w")
 f.write("Hello, world!")
 f.close()
+
+# opening a file in read mode and reading from it and then closing the file
+f = open("example.txt", "r")
+content = f.read()
+f.close()
+
+# opening a file in append mode and appending to it and then closing the file
+f = open("example.txt", "a")
+f.write("This is a new line.")
+f.close()
+
+# opening a file in create mode and creating a new file and then closing the file
+f = open("example.txt", "x")
+f.close()
+
+# opening a file in binary mode and reading from it and then closing the file
+f = open("example.txt", "rb")
+content = f.read()
+f.close()
+
+# opening a file in text mode and reading from it and then closing the file
+f = open("example.txt", "rt")
+content = f.read()
+f.close()
+
+# opening a file in binary mode and writing to it and then closing the file
+f = open("example.txt", "wb")
+f.write(b"Hello, world!")
+f.close()
+
+# opening a file in text mode and writing to it and then closing the file
+f = open("example.txt", "wt")
+f.write("Hello, world!")
+f.close()
+
+# opening a file in update mode and writing to it and then closing the file
+f = open("example.txt", "w+")
+f.write("Hello, world!")
+f.seek(0)
+content = f.read()
+f.close()
+
+# opening a file in append mode and writing to it and then closing the file
+f = open("example.txt", "a+")
+f.write("This is a new line.")
+f.seek(0)
+content = f.read()
+f.close()
+
+# opening a file in create mode and creating a new file and then closing the file
+f = open("example.txt", "x+")
+f.close()
+
+# opening a file in update mode and writing to it and then closing the file
+f = open("example.txt", "r+")
+f.write("Hello, world!")
+f.seek(0)
+content = f.read()
+f.close()
+
+# opening a file in append mode and writing to it and then closing the file
+f = open("example.txt", "a+")
+f.write("This is a new line.")
+f.seek(0)
+content = f.read()
+f.close()
+
+# Deleting a file using os module
+import os
+
+os.remove("example.txt")
+
+# Renaming a file using os module
+import os
+
+os.rename("example.txt", "new_example.txt")
+
+# Copying a file using shutil module
+import shutil
+
+shutil.copy("example.txt", "new_example.txt")
+
+# Moving a file using shutil module
+import shutil
+
+shutil.move("example.txt", "new_example.txt")
+
+# Creating a directory using os module
+import os
+
+os.mkdir("new_directory")
+
+# Removing a directory using os module
+import os
+
+os.rmdir("new_directory")
+
+# Creating a directory using os module
+import os
+
+os.makedirs("new_directory/subdirectory")
+
+# Removing a directory using os module
+import os
+
+os.removedirs("new_directory/subdirectory")
+
