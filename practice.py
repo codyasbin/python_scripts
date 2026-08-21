@@ -665,3 +665,23 @@ except Exception as e:
 # print(cat.speak()) # Output: Whiskers says Meow!
 
 """without super function a child class can override the parent class constructor and the parent class constructor will not be called. But with super function a child class can call the parent class constructor and the parent class constructor will be called. This is useful when we want to initialize the parent class attributes in the child class constructor."""
+
+
+"""Encapsulation: Hide the internal state of an object and require all interaction to be performed through an object's methods. This is done to protect the integrity of the object's state and to prevent external code from directly modifying it. In Python, encapsulation is achieved by using private attributes and methods, which are denoted by a leading underscore."""
+
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.__age = age # Private property , which is not accessible outside the class. It can only be accessed through methods of the class.
+
+#   def get_age(self):
+#     return self.__age
+
+# p1 = Person("Emil", 25)
+# print(p1.name)
+# try:
+#     print(p1.__age) # This will cause an error
+# except AttributeError:
+#     print("Error: Cannot access private property '__age' directly.")
+
+# print(p1.get_age()) #private property can be accessed through the method of the class
