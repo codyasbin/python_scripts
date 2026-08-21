@@ -741,3 +741,10 @@ except Exception as e:
 # car.drive()
 # car.engine.start()
 # car.drive()
+
+"""File handling in python is done using the built-in open() function. The open() function takes two arguments: the name of the file and the mode in which the file is to be opened. The mode can be 'r' for reading, 'w' for writing, 'a' for appending, and 'x' for creating a new file. The open() function returns a file object, which can be used to read or write to the file. After the file operations are done, it is important to close the file using the close() method of the file object."""
+
+# opening a file in write mode and writing to it and then closing the file
+f = open("example.txt", "w")
+f.write("Hello, world!")
+f.close()
