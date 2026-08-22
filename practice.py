@@ -744,114 +744,116 @@ except Exception as e:
 
 """File handling in python is done using the built-in open() function. The open() function takes two arguments: the name of the file and the mode in which the file is to be opened. The mode can be 'r' for reading, 'w' for writing, 'a' for appending, and 'x' for creating a new file. The open() function returns a file object, which can be used to read or write to the file. After the file operations are done, it is important to close the file using the close() method of the file object."""
 
-# opening a file in write mode and writing to it and then closing the file
-f = open("example.txt", "w")
-f.write("Hello, world!")
-f.close()
+# # opening a file in write mode and writing to it and then closing the file
+# f = open("example.txt", "w")
+# f.write("Hello, world!")
+# f.close()
 
-# opening a file in read mode and reading from it and then closing the file
-f = open("example.txt", "r")
-content = f.read()
-f.close()
+# # opening a file in read mode and reading from it and then closing the file
+# f = open("example.txt", "r")
+# content = f.read()
+# f.close()
 
-# opening a file in append mode and appending to it and then closing the file
-f = open("example.txt", "a")
-f.write("This is a new line.")
-f.close()
+# # opening a file in append mode and appending to it and then closing the file
+# f = open("example.txt", "a")
+# f.write("This is a new line.")
+# f.close()
 
-# opening a file in create mode and creating a new file and then closing the file
-f = open("example.txt", "x")
-f.close()
+# # opening a file in create mode and creating a new file and then closing the file
+# f = open("example.txt", "x")
+# f.close()
 
-# opening a file in binary mode and reading from it and then closing the file
-f = open("example.txt", "rb")
-content = f.read()
-f.close()
+# # opening a file in binary mode and reading from it and then closing the file
+# f = open("example.txt", "rb")
+# content = f.read()
+# f.close()
 
-# opening a file in text mode and reading from it and then closing the file
-f = open("example.txt", "rt")
-content = f.read()
-f.close()
+# # opening a file in text mode and reading from it and then closing the file
+# f = open("example.txt", "rt")
+# content = f.read()
+# f.close()
 
-# opening a file in binary mode and writing to it and then closing the file
-f = open("example.txt", "wb")
-f.write(b"Hello, world!")
-f.close()
+# # opening a file in binary mode and writing to it and then closing the file
+# f = open("example.txt", "wb")
+# f.write(b"Hello, world!")
+# f.close()
 
-# opening a file in text mode and writing to it and then closing the file
-f = open("example.txt", "wt")
-f.write("Hello, world!")
-f.close()
+# # opening a file in text mode and writing to it and then closing the file
+# f = open("example.txt", "wt")
+# f.write("Hello, world!")
+# f.close()
 
-# opening a file in update mode and writing to it and then closing the file
-f = open("example.txt", "w+")
-f.write("Hello, world!")
-f.seek(0)
-content = f.read()
-f.close()
+# # opening a file in update mode and writing to it and then closing the file
+# f = open("example.txt", "w+")
+# f.write("Hello, world!")
+# f.seek(0)
+# content = f.read()
+# f.close()
 
-# opening a file in append mode and writing to it and then closing the file
-f = open("example.txt", "a+")
-f.write("This is a new line.")
-f.seek(0)
-content = f.read()
-f.close()
+# # opening a file in append mode and writing to it and then closing the file
+# f = open("example.txt", "a+")
+# f.write("This is a new line.")
+# f.seek(0)
+# content = f.read()
+# f.close()
 
-# opening a file in create mode and creating a new file and then closing the file
-f = open("example.txt", "x+")
-f.close()
+# # opening a file in create mode and creating a new file and then closing the file
+# f = open("example.txt", "x+")
+# f.close()
 
-# opening a file in update mode and writing to it and then closing the file
-f = open("example.txt", "r+")
-f.write("Hello, world!")
-f.seek(0)
-content = f.read()
-f.close()
+# # opening a file in update mode and writing to it and then closing the file
+# f = open("example.txt", "r+")
+# f.write("Hello, world!")
+# f.seek(0)
+# content = f.read()
+# f.close()
 
-# opening a file in append mode and writing to it and then closing the file
-f = open("example.txt", "a+")
-f.write("This is a new line.")
-f.seek(0)
-content = f.read()
-f.close()
+# # opening a file in append mode and writing to it and then closing the file
+# f = open("example.txt", "a+")
+# f.write("This is a new line.")
+# f.seek(0)
+# content = f.read()
+# f.close()
 
-# Deleting a file using os module
-import os
+# # Deleting a file using os module
+# import os
 
-os.remove("example.txt")
+# os.remove("example.txt")
 
-# Renaming a file using os module
-import os
+# # Renaming a file using os module
+# import os
 
-os.rename("example.txt", "new_example.txt")
+# os.rename("example.txt", "new_example.txt")
 
-# Copying a file using shutil module
-import shutil
+# # Copying a file using shutil module
+# import shutil
 
-shutil.copy("example.txt", "new_example.txt")
+# shutil.copy("example.txt", "new_example.txt")
 
-# Moving a file using shutil module
-import shutil
+# # Moving a file using shutil module
+# import shutil
 
-shutil.move("example.txt", "new_example.txt")
+# shutil.move("example.txt", "new_example.txt")
 
-# Creating a directory using os module
-import os
+# # Creating a directory using os module
+# import os
 
-os.mkdir("new_directory")
+# os.mkdir("new_directory")
 
-# Removing a directory using os module
-import os
+# # Removing a directory using os module
+# import os
 
-os.rmdir("new_directory")
+# os.rmdir("new_directory")
 
-# Creating a directory using os module
-import os
+# # Creating a directory using os module
+# import os
 
-os.makedirs("new_directory/subdirectory")
+# os.makedirs("new_directory/subdirectory")
 
-# Removing a directory using os module
-import os
+# # Removing a directory using os module
+# import os
 
-os.removedirs("new_directory/subdirectory")
+# os.removedirs("new_directory/subdirectory")
+
+
 
